@@ -1,0 +1,8 @@
+.icon{
+    display: block;
+    font-size: 20px;
+    transform: rotate(90deg)
+}
+.card-header.collapse.show .fa-sort-down:before{
+    transform: rotate(180deg)
+}

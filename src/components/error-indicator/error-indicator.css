@@ -1,0 +1,31 @@
+.error-indicator {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #d9534f;
+    width: 500px;
+  }
+  
+  .error-indicator .icon {
+    font-size: 80px;
+    transform: rotate(0deg)
+  }
+
+  .error-logo{
+    transform: scale(1)
+  }
+  
+  .error-title {
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .error-text {
+    font-size: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }

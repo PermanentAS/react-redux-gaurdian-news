@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { fetchPosts } from "./actions";
+import { withTheGuardianService } from "./components/hoc";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./components/header";
+import NewsList from "./components/news-list";
+import Navigation from "./components/navigation";
+import ErrorBoundry from "./components/error-boundry";
+
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchPosts(1);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <ErrorBoundry>
+          <NewsList />
+        </ErrorBoundry>
+        <Navigation />
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch, { theGuardianService }) => {
+  return bindActionCreators(
+    {
+      fetchPosts: fetchPosts(theGuardianService)
+    },
+    dispatch
+  );
+};
+
+export default withTheGuardianService()(
+  connect(
+    null,
+    mapDispatchToProps
+  )(App)
+);

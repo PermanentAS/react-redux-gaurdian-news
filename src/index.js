@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./index.css";
+import App from "./App";
+import TheGuardianService from "./services/the-guardian-service";
+import { TheGuardianServiceProvider } from "./components/the-guardian-service-context";
+import ErrorBoundry from "./components/error-boundry";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import store from "./store";
+
+const theGuardianService = new TheGuardianService();
+
+ReactDOM.render(
+  <Provider store={store}>
+      <TheGuardianServiceProvider value={theGuardianService}>
+        <App />
+      </TheGuardianServiceProvider>
+  </Provider>,
+  document.getElementById("root")
+);
