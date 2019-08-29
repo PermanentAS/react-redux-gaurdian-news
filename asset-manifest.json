@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-redux-gaurdian-news/static/css/main.3d635d03.chunk.css",
+    "main.js": "/react-redux-gaurdian-news/static/js/main.254e0448.chunk.js",
+    "main.js.map": "/react-redux-gaurdian-news/static/js/main.254e0448.chunk.js.map",
+    "runtime~main.js": "/react-redux-gaurdian-news/static/js/runtime~main.2962aa9e.js",
+    "runtime~main.js.map": "/react-redux-gaurdian-news/static/js/runtime~main.2962aa9e.js.map",
+    "static/js/2.6815a1b9.chunk.js": "/react-redux-gaurdian-news/static/js/2.6815a1b9.chunk.js",
+    "static/js/2.6815a1b9.chunk.js.map": "/react-redux-gaurdian-news/static/js/2.6815a1b9.chunk.js.map",
+    "index.html": "/react-redux-gaurdian-news/index.html",
+    "precache-manifest.5915e1cf2a742e712e8bad7645b0e97f.js": "/react-redux-gaurdian-news/precache-manifest.5915e1cf2a742e712e8bad7645b0e97f.js",
+    "service-worker.js": "/react-redux-gaurdian-news/service-worker.js",
+    "static/css/main.3d635d03.chunk.css.map": "/react-redux-gaurdian-news/static/css/main.3d635d03.chunk.css.map"
+  }
+}
